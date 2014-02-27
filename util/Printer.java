@@ -2,6 +2,8 @@ package leetcode.util;
 
 import leetcode.common.ListNode;
 
+import java.util.LinkedList;
+
 /**
  * Created by amour on 14-2-27.
  */
@@ -22,4 +24,12 @@ public class Printer {
         }
         System.out.println(result);
     }
+
+//    public static void print(LinkedList list) {
+//        StringBuilder result = new StringBuilder();
+//        for(Object o:list) {
+//            result.append(o.toString()).append(" ");
+//        }
+//        System.out.println(result);
+//    }
 }

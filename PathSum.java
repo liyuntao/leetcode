@@ -27,7 +27,7 @@ public class PathSum {
 
     public static void main(String[] args) {
         PathSum obj = new PathSum();
-        TreeNode tree = Generator.genTree(new Integer[]{6, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, null, null, 1});
+        TreeNode tree = Generator.genTree(new Integer[]{5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, null, null, 1});
 
         System.out.println(obj.hasPathSum(tree, 22));
     }
