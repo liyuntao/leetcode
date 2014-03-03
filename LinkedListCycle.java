@@ -33,18 +33,18 @@ public class LinkedListCycle {
         ListNode l = Generator.genList(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
         System.out.println(obj.hasCycle(l));
 
-        l = null;
+        l = null;// {}
+        System.out.println(obj.hasCycle(l));
+
+        l = new ListNode(1); // {1}
         System.out.println(obj.hasCycle(l));
 
         l = new ListNode(1);
-        System.out.println(obj.hasCycle(l));
-
-        l = new ListNode(1);
-        l.next = l;
+        l.next = l; // {1} index 0 tails itself
         System.out.println(obj.hasCycle(l));
 
         l =  Generator.genList(new int[]{1, 2});
-        l.next.next = l;
+        l.next.next = l; // {1,2} index 1 tails index 0
         System.out.println(obj.hasCycle(l));
     }
 
