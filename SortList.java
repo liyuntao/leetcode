@@ -6,6 +6,7 @@ import leetcode.util.Printer;
 
 /**
  * Created by amour on 14-2-23.
+ * 这个迭代的实现很不优雅，改进版在SortList2
  */
 public class SortList {
     ListNode whole_head = null;
