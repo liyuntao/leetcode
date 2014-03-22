@@ -5,6 +5,9 @@ import leetcode.util.Generator;
 
 /**
  * Created by amour on 14-2-28.
+ * 为什么有环的情况下二者一定会相遇呢？
+ * 因为fast先进入环，在slow进入之后，如果把slow看作在前面，fast在后面每次循环都向slow靠近1，
+ * 所以一定会相遇，而不会出现fast直接跳过slow的情况。
  */
 public class LinkedListCycle {
     public boolean hasCycle(ListNode head) {
