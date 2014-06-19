@@ -8,21 +8,21 @@ import java.util.Map;
  */
 public class TwoSum {
     public int[] twoSum(int[] numbers, int target) {
-       Map<Integer, Integer> m = new HashMap<Integer, Integer>();// num => index
+        Map<Integer, Integer> m = new HashMap<Integer, Integer>();// num => index
 
-       Integer[] specialResult = new Integer[2];
-       for(int i=0; i<numbers.length; i++){
+        Integer[] result = new Integer[2];
+        for(int i=0; i<numbers.length; i++){
            if(target%2 == 0 && numbers[i] == target/2) {
-               if(specialResult[0] == null){
-                   specialResult[0] = i+1;
+               if(result[0] == null){
+                   result[0] = i+1;
                }else{
-                   specialResult[1] = i+1;
-                   return new int[]{specialResult[0], specialResult[1]};
+                   result[1] = i+1;
+                   return new int[]{result[0], result[1]};
                }
                continue;
            }
            m.put(numbers[i], i);
-       }
+        }
 
         for(int num : m.keySet()){
             if(m.containsKey(target - num)) {
@@ -31,7 +31,6 @@ public class TwoSum {
                 return a > b? new int[]{b, a} : new int[]{a, b};
             }
         }
-
         return null;
     }
 
